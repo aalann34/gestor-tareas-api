@@ -1,8 +1,10 @@
 const express = require('express');
+const cors = require('cors'); // Importar cors
 const app = express();
 
 // Middleware para parsear JSON
 app.use(express.json());
+app.use(cors()); // Usar cors
 
 // Lista de tareas (esto debe persistir en una base de datos en producción)
 const tasks = [
